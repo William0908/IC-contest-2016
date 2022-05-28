@@ -51,9 +51,6 @@ reg [13:0] c [0:8]; // c[4] is central position
 reg [7:0] in_data [0:8];
 reg [7:0] T0, T1, T2, T3, T5, T6, T7, T8;
 reg [7:0] M0, M1, M2, M3, M5, M6, M7, M8;
-reg [2:0] test;
-reg [2:0] test1;
-reg [2:0] test2;
 
 integer i;
 
