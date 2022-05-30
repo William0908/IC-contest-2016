@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LBP
+Version: M-2016.12
+Date   : Sat May 28 17:10:49 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: axis_Y_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: gray_addr_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  axis_Y_reg[0]/CK (DFFRX1)                0.00       0.50 r
+  axis_Y_reg[0]/Q (DFFRX1)                 0.68       1.18 f
+  U332/Y (CLKBUFX3)                        0.80       1.99 f
+  sub_184/A[0] (LBP_DW01_dec_0)            0.00       1.99 f
+  sub_184/U2/Y (OR2X1)                     0.61       2.60 f
+  sub_184/U28/Y (OR2X1)                    0.46       3.06 f
+  sub_184/U27/Y (OR2X1)                    0.46       3.52 f
+  sub_184/U26/Y (OR2X1)                    0.46       3.98 f
+  sub_184/U25/Y (OR2X1)                    0.46       4.43 f
+  sub_184/U24/Y (OR2X1)                    0.46       4.89 f
+  sub_184/U23/Y (OR2X1)                    0.46       5.35 f
+  sub_184/U22/Y (OR2X1)                    0.47       5.82 f
+  sub_184/U21/Y (NOR2X1)                   0.52       6.34 r
+  sub_184/U20/Y (NAND2X1)                  0.32       6.66 f
+  sub_184/U1/Y (CLKINVX1)                  0.25       6.91 r
+  sub_184/U18/Y (NAND2X1)                  0.29       7.19 f
+  sub_184/U15/Y (NOR2X1)                   0.27       7.47 r
+  sub_184/U14/Y (XOR2X1)                   0.28       7.74 f
+  sub_184/SUM[13] (LBP_DW01_dec_0)         0.00       7.74 f
+  U879/Y (AOI22X1)                         0.28       8.02 r
+  U875/Y (NAND4X1)                         0.23       8.25 f
+  gray_addr_reg[13]/D (DFFRX1)             0.00       8.25 f
+  data arrival time                                   8.25
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  gray_addr_reg[13]/CK (DFFRX1)            0.00      10.40 r
+  library setup time                      -0.26      10.14
+  data required time                                 10.14
+  -----------------------------------------------------------
+  data required time                                 10.14
+  data arrival time                                  -8.25
+  -----------------------------------------------------------
+  slack (MET)                                         1.89
+
+
+1
